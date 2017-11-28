@@ -15,10 +15,10 @@
 
 <body>
 <script>
-window.alert("19th Party Congress");
+window.alert("human right story: Domestic Helpers in HK");
 </script>
     <div class="topic">
-        <h2 style="font-family:verdana">China set to strengthen ‘eco-civilization’ in the next five years </h2>
+        <h2 style="font-family:verdana"> story headline </h2>
         <h5> Reported by Melissa KO </h5>
         <a href="https://hkbujournalism.wordpress.com/"> HKBU Newsbeat</a>
     </div>
@@ -94,73 +94,118 @@ option = {
     <div class="col-md-4 col-sm-offset-1" style="font-size:16px">
         <br>
         <br>
-        <p>The key job markets in the sector are China, India, Brazil, the Russian Federation and Viet Nam, which together account for 62% of the total.</p>
+        <br>
+        <br>
+        <p>graph 1 description</p>
     </div>
 </div>
 </div>
 <br>
-<br>
-   <p>China has long relied on coal-fired power plants that have suffocated the country. But it is now taking the lead in clean energy. </p>
-    <br>
-    <p>The Chinese National Energy Administration confirmed its plan to invest at least US$360 billion on renewable energy development such as solar and wind this early year, which would also create about 13 million jobs in the renewable energy sector by 2020. </p>
-    <br>
-    <p>Not only does China strive for the domestic renewable market, but it also focuses on foreign investment. </p>
-    <br>
-    <p>The latest report from Institute for Energy Economics and Financial Analysis (IEEFA) indicated that China increased its foreign investment in renewables by 60 per cent to reach a record US$32 billion in 2016 and is expected to pick up the pace this year. </p>
+<br> <br>
+description    
+ 
     <br>
     
 <div class="container-fluid">
 <div class="row">
 <div class="col-md-4 col-sm-offset-1" style="font-size:16px">
-        <br>
-    <p>China is the world leader in domestic investment in renewable energy and associated
-low-emissions-energy sectors. China invested around US$103 billion in this renewable energy industry in 2015,</p>
+        <br> <br> <br>
+    <p> graph 2 desciption </p>
         <br>
 </div>
 <div class="col-md-6 col-sm-offset-1">
 <div id="mybar" style="width: 600px;height:400px;"></div>
 <script>
  option = {
-    title : {
-        text: 'New Investment in Renewable Energy by Country & Assest (US$bn) ',
-        subtext: 'Energy Economics and Financial Analysis'
+    title: {
+        text: 'The reaction of first-time domestic helpers when settling payment',
+        subtext: 'data from HelperChoice',
+        left: 'center'
     },
-    tooltip : {
-        trigger: 'axis'
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
     legend: {
-        data:['Asset']
+        orient: 'vertical',
+        x: 'left',
+        data:['take a loan by agency','not take a loan by agency','plan to sue the agency', 'not plan to sue the agency']
     },
-    calculable : true,
-    xAxis : [
+    series: [
         {
-            type : 'category',
-            data : ['China','USA','Japan','UK','India','Germany','Brzail','South Africa','Mexico','Chile']
-        }
-    ],
-    yAxis : [
-        {
-            type : 'value'
-        }
-    ],
-    series : [
-        {
-            name:'Assest',
-            type:'bar',
-            data:[102.9, 44.1, 36.2, 22.2, 10.2, 8.5, 7.1, 4.5, 4.0, 3.4],
-            markPoint : {
-                data : [
-                    {type : 'max', name: '最大值'},
-                    {type : 'min', name: '最小值'}
-                ]
+            name:'reaction',
+            type:'pie',
+            selectedMode: 'single',
+            radius: ["20%", '30%'],
+
+            label: {
+                normal: {
+                    position: 'inner'
+                }
             },
-            markLine : {
-                data : [
-                    {type : 'average', name: '平均值'}
-                ]
-            }
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:68, name:'plan to sue the agency', selected:true},
+                {value:132, name:'not plan to sue the agency'},
+            ]
         },
-        
+        {
+            name:'reaction',
+            type:'pie',
+            radius: ['45%', '55%'],
+            label: {
+                normal: {
+                    formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                    backgroundColor: '#eee',
+                    borderColor: '#aaa',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    // shadowBlur:3,
+                    // shadowOffsetX: 2,
+                    // shadowOffsetY: 2,
+                    // shadowColor: '#999',
+                    // padding: [0, 7],
+                    rich: {
+                        a: {
+                            color: '#999',
+                            lineHeight: 22,
+                            align: 'center'
+                        },
+                        // abg: {
+                        //     backgroundColor: '#333',
+                        //     width: '100%',
+                        //     align: 'right',
+                        //     height: 22,
+                        //     borderRadius: [4, 4, 0, 0]
+                        // },
+                        hr: {
+                            borderColor: '#aaa',
+                            width: '100%',
+                            borderWidth: 0.5,
+                            height: 0
+                        },
+                        b: {
+                            fontSize: 16,
+                            lineHeight: 33
+                        },
+                        per: {
+                            color: '#eee',
+                            backgroundColor: '#334455',
+                            padding: [2, 4],
+                            borderRadius: 2
+                        }
+                    }
+                }
+            },
+            data:[
+                {value:48, name:'take a loan by agency'},
+                {value:152, name:'not take a loan by agency'}
+            ]
+        }
     ]
 };
      // Use the option to display chart
